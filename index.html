@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>LuckyPadel</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jquery.mobile-1.4.2/jquery.mobile-1.4.2.min.css" />
+    <script src="jquery-1.11.0.js"></script>
+    <script src="jquery.mobile-1.4.2/jquery.mobile-1.4.2.min.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="fastclick.js"></script>
+    <link rel="stylesheet" href="estilos.css" />
+    <script src="funciones.js"></script>
+</head>
+
+<body>
+    <div data-role="page" id="inicio">
+        <div data-role="header" id="cabecera" data-position="fixed" data-theme="b">
+            <img src="images/logo2.png" class="logo">
+            <a href="#info1" class="ui-btn ui-corner-all ui-icon-info ui-btn-icon-notext ui-btn-right"></a>
+        </div>
+        <div data-role="main" class="gris">
+            <img src="images/principal.png" class="imageppal" />
+            <div id="contenido_principal">
+                <h1>Lucky Padel</h1>
+                <p>Bienvenidos a Lucky Padel, el primer club donde sus socios viviran una experiencia única practicando su deporte favorito.</p>
+                <a href="http://www.facebook.com" target="_blank">
+                    <img class="icono" src="images/face.png" />
+                </a>
+                <a href="http://www.google.es" target="_blank">
+                    <img class="icono" src="images/world2.png" />
+                </a>
+            </div>
+            <hr>
+            <div class="ui-grid-b">
+                <div class="ui-block-a">
+                    <img id="reloj" src="images/reloj.png" />
+                </div>
+                <div class="ui-block-b">
+                    <table>
+                        <tr>
+                            <td>Lun-Vie</td>
+                        </tr>
+                        <tr>
+                            <td>Sábado</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="ui-block-c">
+                    <table>
+                        <tr>
+                            <td>9:00-20:00</td>
+                        </tr>
+                        <tr>
+                            <td>9:00-13:00</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" class="foot" data-theme="b">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#inicio" data-icon="home" data-iconpos="top" class="ui-state-persist">Inicio</a>
+                    </li>
+                    <li><a href="#servicios" data-icon="grid" data-iconpos="top">Servicios</a>
+                    </li>
+                    <li><a href="#mapas" data-icon="location" data-iconpos="top">Mapa</a>
+                    </li>
+                    <li><a href="#contacto" data-icon="mail" data-iconpos="top">Contactar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="panel" id="info1" class="panel_info" data-display="overlay" data-position="right">
+            <h1>Club Lucky Padel</h1>
+            <img src="images/logo_info.png" class="imagen_info">
+            <p><small>Realizada por:</small>
+            </p>
+            <p><small>Francisco M. Doblas Almagro</small>
+            </p>
+        </div>
+    </div>
+    <div data-role="page" id="servicios">
+        <div data-role="header" id="cabecera" data-position="fixed" data-theme="b">
+            <img src="images/logo2.png" class="logo">
+            <a href="#info2" class="ui-btn ui-corner-all ui-icon-info ui-btn-icon-notext ui-btn-right"></a>
+        </div>
+        <div data-role="main" class="gris">
+            <img src="images/principal.png" class="imageppal" />
+            <div id="capa">
+                <div id="texto">Somos un Club de padel selecto</div>
+            </div>
+            <ul data-role="listview" id="listaserv">
+                <li>
+                    <a href="#servicio1" data-transition="slide">
+                        <img src="images/club.png" />
+                        <h2>Club</h2>
+                        <p>Lucky Padel Club</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#servicio2" data-transition="slide">
+                        <img src="images/escuela.png" />
+                        <h2>Escuela de Padel</h2>
+                        <p>Clases a todos los niveles</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#servicio3" data-transition="slide">
+                        <img src="images/torneo.png" />
+                        <h2>Torneos</h2>
+                        <p>Ambiente singular</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed" class="foot" data-theme="b">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#inicio" data-icon="home" data-iconpos="top">Inicio</a>
+                    </li>
+                    <li><a href="#servicios" data-icon="grid" data-iconpos="top" class="ui-state-persist">Servicios</a>
+                    </li>
+                    <li><a href="#mapas" data-icon="location" data-iconpos="top">Mapa</a>
+                    </li>
+                    <li><a href="#contacto" data-icon="mail" data-iconpos="top">Contactar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="panel" id="info2" class="panel_info" data-display="overlay" data-position="right">
+            <h1>Club Lucky Padel</h1>
+            <img src="images/logo_info.png" class="imagen_info">
+            <p><small>Realizada por:</small>
+            </p>
+            <p><small>Francisco M. Doblas Almagro</small>
+            </p>
+        </div>
+    </div>
+
+    <div data-role="page" id="servicio1">
+        <div data-role="header" id="cabecera" data-position="fixed" data-theme="b">
+            <a href="#" class="ui-btn ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-left" data-rel="back" data-transition="slide" data-direction="reverse"></a>
+            <img src="images/logo2.png" class="logo">
+            <a href="#info3" class="ui-btn ui-corner-all ui-icon-info ui-btn-icon-notext ui-btn-right"></a>
+        </div>
+        <div data-role="main" class="ui-content">
+            <div class="contenido_servicio">
+                <h1 class="h1_servicio">Lucky Padel Club</h1>
+                <img src="images/club.png" class="imagen_servicio" />
+            </div>
+            <p>En nuestro Club podrá disfrutar de un ambiente selecto, con las mejores instalaciones de Padel existentes en Europa. Todo para brindar el servicio que se merece</p>
+        </div>
+        <div data-role="footer" data-position="fixed" class="foot" data-theme="b">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#inicio" data-icon="home" data-iconpos="top">Inicio</a>
+                    </li>
+                    <li><a href="#servicios" data-icon="grid" data-iconpos="top" class="ui-state-persist">Servicios</a>
+                    </li>
+                    <li><a href="#mapas" data-icon="location" data-iconpos="top">Mapa</a>
+                    </li>
+                    <li><a href="#contacto" data-icon="mail" data-iconpos="top">Contactar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="panel" id="info3" class="panel_info" data-display="overlay" data-position="right">
+            <h1>Club Lucky Padel</h1>
+            <img src="images/logo_info.png" class="imagen_info">
+            <p><small>Realizada por:</small>
+            </p>
+            <p><small>Francisco M. Doblas Almagro</small>
+            </p>
+        </div>
+    </div>
+
+    <div data-role="page" id="servicio2">
+        <div data-role="header" id="cabecera" data-position="fixed" data-theme="b">
+            <a href="#" class="ui-btn ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-left" data-rel="back" data-transition="slide" data-direction="reverse"></a>
+            <img src="images/logo2.png" class="logo">
+            <a href="#info4" class="ui-btn ui-corner-all ui-icon-info ui-btn-icon-notext ui-btn-right"></a>
+        </div>
+        <div data-role="main" class="ui-content">
+            <div class="contenido_servicio">
+                <h1 class="h1_servicio">Escuela de Padel</h1>
+                <img src="images/escuela.png" class="imagen_servicio" />
+            </div>
+            <p>Nuestra escuela esta pensada para todos los niveles, principiante, avanzado, perfecionamiento. Venga y pongase en manos de nuestros profesionales.</p>
+        </div>
+        <div data-role="footer" data-position="fixed" class="foot" data-theme="b">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#inicio" data-icon="home" data-iconpos="top">Inicio</a>
+                    </li>
+                    <li><a href="#servicios" data-icon="grid" data-iconpos="top" class="ui-state-persist">Servicios</a>
+                    </li>
+                    <li><a href="#mapas" data-icon="location" data-iconpos="top">Mapa</a>
+                    </li>
+                    <li><a href="#contacto" data-icon="mail" data-iconpos="top">Contactar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="panel" id="info4" class="panel_info" data-display="overlay" data-position="right">
+            <h1>Club Lucky Padel</h1>
+            <img src="images/logo_info.png" class="imagen_info">
+            <p><small>Realizada por:</small>
+            </p>
+            <p><small>Francisco M. Doblas Almagro</small>
+            </p>
+        </div>
+    </div>
+
+    <div data-role="page" id="servicio3">
+        <div data-role="header" id="cabecera" data-position="fixed" data-theme="b">
+            <a href="#" class="ui-btn ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-left" data-rel="back" data-transition="slide" data-direction="reverse"></a>
+            <img src="images/logo2.png" class="logo">
+            <a href="#info5" class="ui-btn ui-corner-all ui-icon-info ui-btn-icon-notext ui-btn-right"></a>
+        </div>
+        <div data-role="main" class="ui-content">
+            <div class="contenido_servicio">
+                <h1 class="h1_servicio">Torneos</h1>
+                <img src="images/torneo.png" class="imagen_servicio" />
+            </div>
+            <p>Nos dedicamos a organizar los mejores torneos de Sevilla. Torneos de todos los niveles, donde pasar un buen rato es lo principal.</p>
+        </div>
+        <div data-role="footer" data-position="fixed" class="foot" data-theme="b">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#inicio" data-icon="home" data-iconpos="top">Inicio</a>
+                    </li>
+                    <li><a href="#servicios" data-icon="grid" data-iconpos="top" class="ui-state-persist">Servicios</a>
+                    </li>
+                    <li><a href="#mapas" data-icon="location" data-iconpos="top">Mapa</a>
+                    </li>
+                    <li><a href="#contacto" data-icon="mail" data-iconpos="top">Contactar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="panel" id="info5" class="panel_info" data-display="overlay" data-position="right">
+            <h1>Club Lucky Padel</h1>
+            <img src="images/logo_info.png" class="imagen_info">
+            <p><small>Realizada por:</small>
+            </p>
+            <p><small>Francisco M. Doblas Almagro</small>
+            </p>
+        </div>
+    </div>
+
+    <!--MAPA -->
+    <div data-role="page" id="mapas">
+        <div data-role="header" id="cabecera" data-position="fixed" data-theme="b">
+            <img src="images/logo2.png" class="logo">
+            <a href="#info6" class="ui-btn ui-corner-all ui-icon-info ui-btn-icon-notext ui-btn-right"></a>
+        </div>
+        <div data-role="panel" id="info6" class="panel_info" data-display="overlay" data-position="right">
+            <h1>Club Lucky Padel</h1>
+            <img src="images/logo_info.png" class="imagen_info">
+            <p><small>Realizada por:</small>
+            </p>
+            <p><small>Francisco M. Doblas Almagro</small>
+            </p>
+        </div>
+        <div data-role="main" id="cuerpomapas">
+            <div id="map_canvas"></div>
+        </div>
+        <div data-role="footer" data-position="fixed" class="foot" data-theme="b">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#inicio" data-icon="home" data-iconpos="top">Inicio</a>
+                    </li>
+                    <li><a href="#servicios" data-icon="grid" data-iconpos="top">Servicios</a>
+                    </li>
+                    <li><a href="#mapas" data-icon="location" data-iconpos="top" class="ui-state-persist">Mapa</a>
+                    </li>
+                    <li><a href="#contacto" data-icon="mail" data-iconpos="top">Contactar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--CONTACTO-->
+    <div data-role="page" id="contacto">
+        <div data-role="header" id="cabecera" data-position="fixed" data-theme="b">
+            <img src="images/logo2.png" class="logo">
+            <a href="#info7" class="ui-btn ui-corner-all ui-icon-info ui-btn-icon-notext ui-btn-right"></a>
+        </div>
+        <div data-role="panel" id="info7" class="panel_info" data-display="overlay" data-position="right">
+            <h1>Club Lucky Padel</h1>
+            <img src="images/logo_info.png" class="imagen_info">
+            <p><small>Realizada por:</small>
+            </p>
+            <p><small>Francisco M. Doblas Almagro</small>
+            </p>
+        </div>
+        <div data-role="main" class="gris">
+            <img src="images/principal.png" class="imageppal" />
+            <p>Lucky Padel es un club para disfrutar con amigos, familia e incluso con la suegra.</p>
+
+            <!--<a href="tel:+34635189809">
+                    <img src="images/facebook.ico" />
+                    <p>Número de telefono</p>
+                    635189809</a>-->
+            <div class="controlbuttons">
+
+                <img src="images/telefono4.png" />
+                <p>Número de telefono</p>
+                <a href="tel:+34635189809">635189809</a>
+            </div>
+            <div class="controlbuttons">
+                <img src="images/position.png" />
+                <h5>Dirección</h5>
+                <a href="#mapas" data-transition="slide" data-direction="reverse">Calle melancolia nº 7</a>
+            </div>
+            <div class="controlbuttons">
+                <img src="images/punta.png" />
+                <h5>Contacto</h5>
+                <a href="mailto:fdoblas@gmail.com">fdoblas@gmail.com</a>
+            </div>
+            <div class="controlbuttons">
+                <img src="images/www.png" />
+                <h5>Web</h5>
+                <a href="http://www.google.es" target="_blank">www.luckypadel.com</a>
+            </div>
+
+
+        </div>
+        <div data-role="footer" data-position="fixed" class="foot" data-theme="b">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#inicio" data-icon="home" data-iconpos="top">Inicio</a>
+                    </li>
+                    <li><a href="#servicios" data-icon="grid" data-iconpos="top">Servicios</a>
+                    </li>
+                    <li><a href="#mapas" data-icon="location" data-iconpos="top">Mapa</a>
+                    </li>
+                    <li><a href="#contacto" data-icon="mail" data-iconpos="top" class="ui-state-persist">Contactar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
